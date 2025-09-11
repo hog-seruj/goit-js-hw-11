@@ -4,7 +4,9 @@ input[type="password"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-textarea {
+input[type="number"],
+textarea,
+fieldset {
   border: 1px solid #808080;
   border-radius: 4px;
   letter-spacing: 0.04em;
@@ -30,7 +32,7 @@ input[type="button"] {
   display: inline-block;
   border-radius: 8px;
   padding: 8px 16px;
-  background: #4e75ff;
+  background-color: #4e75ff;
   border: none;
   font-size: 16px;
   font-weight: 500;
@@ -41,7 +43,13 @@ input[type="button"] {
   transition: var(--transition);
 
   &:hover {
-    background: #6c8cff;
+    background-color: #6c8cff;
+  }
+
+  &:disabled {
+    background: #cfcfcf;
+    color: #989898;
+    cursor: auto;
   }
 }
 
@@ -58,5 +66,15 @@ form {
 
   button {
     align-self: flex-start;
+  }
+}
+
+fieldset {
+  display: flex;
+  gap: 48px;
+
+  label {
+    display: inline-block;
+    vertical-align: baseline;
   }
 }
