@@ -14,6 +14,8 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./timer.css');
 @import url('./form.css');
+@import url('./search-form.css');
 @import url('./iziToast.css');
+@import url('./loader.css');
+@import url('./gallery.css');

@@ -1,10 +1,10 @@
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="number"],
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='number'],
 textarea,
 fieldset {
   border: 1px solid #808080;
@@ -28,7 +28,7 @@ label {
 }
 
 button,
-input[type="button"] {
+input[type='button'] {
   display: inline-block;
   border-radius: 8px;
   padding: 8px 16px;
