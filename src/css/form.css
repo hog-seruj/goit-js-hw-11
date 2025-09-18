@@ -18,6 +18,10 @@ fieldset {
   &:focus-visible {
     outline: 1px solid #808080;
   }
+
+  &.error {
+    border-color: #dd5f5f;
+  }
 }
 
 label {

@@ -14,13 +14,22 @@ form.addEventListener('submit', submitHandler);
 
 function submitHandler(e) {
   e.preventDefault();
-  showLoader();
 
   const { ['search-text']: searchInput } = e.target.elements;
+  const searchInputValue = searchInput.value.trim();
 
-  getImagesByQuery(searchInput.value.trim())
-    .then(({ data }) => {
-      createGallery(data.hits);
+  if (!searchInputValue.length) {
+    return;
+  }
+
+  showLoader();
+
+  getImagesByQuery(searchInputValue)
+    .then(data => {
+      if (!data.length) {
+        throw new Error('No images found!');
+      }
+      createGallery(data);
     })
     .catch(error => {
       clearGallery();

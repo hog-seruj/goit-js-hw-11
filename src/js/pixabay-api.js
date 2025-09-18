@@ -12,5 +12,7 @@ export default function getImagesByQuery(query) {
     safesearch: true,
   });
 
-  return axios.get(`${API_URL}?${searchParams}`);
+  return axios.get(`${API_URL}?${searchParams}`).then(result => {
+    return result.data.hits;
+  });
 }
